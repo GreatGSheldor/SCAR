@@ -195,7 +195,9 @@ Project photos and demonstration videos are included in the repository.
 
 ### SCAR
 
-![SCAR](SCAR%201.jpg)
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/5f38e3d7-c4ba-4746-b4b3-cbf0790ea804" />
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/3a0f15d1-45ad-4562-85fb-d9d1335124cc" />
+
 
 ---
 
