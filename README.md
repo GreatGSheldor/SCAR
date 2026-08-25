@@ -64,7 +64,8 @@ Built as an exploration of robotics and embedded systems, SCAR was designed to b
 | Solar Panel  | Experimental power support |
 
 ---
-BoM 
+
+## 🔩 Bill of Materials
 
 | Component | Qty | Price (INR) | Approx. USD |
 |---|---:|---:|---:|
