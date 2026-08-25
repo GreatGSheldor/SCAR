@@ -1,111 +1,51 @@
----
+# August 17: Planning SCAR
 
-title: "SCAR"
-author: "Akshat Jain"
-description: "An Arduino and ESP based robotics project with a car, sensors, robotic arm and camera."
-created_at: "2026-08-17"
-------------------------
+I started by planning what I wanted SCAR to have. I wanted the project to have more than just the basic car, so I split it into a few separate parts instead of trying to make everything one program.
 
-# August 17: Starting SCAR
+The main parts were the car itself, the sensors, the robotic arm and the ESP camera.
 
-I started going through the SCAR project and split the different parts into separate programs. I kept the car, arm and camera separate instead of trying to put everything into one sketch.
+I decided to keep the car, arm and camera as separate programs so I could work on and test them independently.
 
-The three main files are `RoboCar.ino`, `RoboArm.ino` and `ESPCam.ino`.
-
-I also collected the existing photos and videos so they could all go into the repository.
-
-![SCAR](SCAR1.jpg)
+<img width="1540" height="881" alt="image" src="https://github.com/user-attachments/assets/8d49f01b-7555-4fde-8ca1-bfdd4b5b74f4" />
 
 **Total time spent: 2 hours**
 
-# August 18: Getting the car moving
+# August 18: Circuit and Code
 
-I worked on `RoboCar.ino` today.
+I worked on the main electronics and the code for the car.
 
-The car uses four DC motors through the AFMotor library. I added the basic serial commands for moving forward, backward, left, right and stopping.
+The main car uses four DC motors through the AFMotor library. I also added two servos, a DHT11 and an MQ-2 to the car program.
 
-The motor speed is set to 200 in the program.
+The DHT11 is connected to A9 and the MQ-2 to A8. The car is controlled through serial commands for movement, servo control and sensor readings.
 
-The main commands are:
+I also worked on the separate robotic arm code. The arm uses four servos on pins 3, 5, 6 and 9 and is controlled through serial commands such as `s1 90`.
 
-`f` for forward, `b` for backward, `l` for left, `r` for right and `s` for stop.
+<img width="1893" height="1016" alt="image" src="https://github.com/user-attachments/assets/496b39ac-13f3-4d1a-a15a-4087996c2433" />
 
-![SCAR](SCAR2.jpg)
+<img width="3840" height="2160" alt="IMG_20260825_100836_910" src="https://github.com/user-attachments/assets/4f0cdc7c-71da-4e87-b992-46b56c2940dd" />
 
-**Total time spent: 3 hours**
+**Total time spent: 5 hours**
 
-# August 19: Adding the sensors
+# August 20: ESP Camera
 
-I worked on the sensors in `RoboCar.ino`.
+I worked on the camera part separately from the Arduino programs.
 
-The DHT11 is connected to A9 and the MQ-2 is connected to A8. The DHT11 is used for temperature and humidity, while the MQ-2 is read as an analog value.
+The ESP camera connects to Wi-Fi and starts a web server. The server provides the camera stream and also has a flash control.
 
-I added separate serial commands for reading them. `t` prints the DHT readings and `q` prints the MQ-2 value.
+I tested the camera separately and checked that the stream could be opened through the web interface.
 
-One useful part of doing it this way was that the sensor readings don't have to constantly be printed while controlling the car.
-
-![SCAR](SCAR1.jpg)
-
-**Total time spent: 2 hours**
-
-# August 20: Adding the two car servos
-
-I added the two servos used by the main car program.
-
-Servo 1 is on pin 9 and servo 2 is on pin 10. Both start at 90 degrees.
-
-I used commands in the form `s1 90` and `s2 90` to set their positions. The program also checks that the angle is between 0 and 180.
-
-![SCAR](SCAR2.jpg)
-
-**Total time spent: 2 hours**
-
-# August 21: Working on the robotic arm
-
-I worked on `RoboArm.ino` separately from the car.
-
-The arm uses four servos on pins 3, 5, 6 and 9. They all start at 90 degrees.
-
-The serial command format is simple:
-
-`s1 <angle>`
-
-`s2 <angle>`
-
-`s3 <angle>`
-
-`s4 <angle>`
-
-The program checks the servo number and angle before moving the servo.
-
-![SCAR](SCAR1.jpg)
+<img width="1893" height="1016" alt="image" src="https://github.com/user-attachments/assets/3afbdf54-fa3d-43ef-a492-3f8a15947e00" />
 
 **Total time spent: 3 hours**
 
-# August 22: Working on ESPCam
+# August 23: Building and Testing SCAR
 
-I worked on `ESPCam.ino`.
+After working on the separate parts, I put the project together and tested the actual hardware.
 
-The ESP camera connects to Wi-Fi and starts a web server. The camera feed is provided as a stream and there is also a flash control.
+I checked the car movement, the sensors, the robotic arm and the camera separately and then went through the available demonstrations.
 
-The camera is kept separate from the Arduino programs, so it has its own code and its own setup.
+The final repository also contains the SCAR photos and separate videos for the car, ESP camera and robotic arm.
 
-![SCAR](SCAR2.jpg)
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/a42c82af-8f31-49b6-921a-d762b609a642" />
 
-**Total time spent: 3 hours**
-
-# August 23: Final testing and organizing
-
-I went back through the different parts of SCAR and checked that the project was separated properly.
-
-The final setup has:
-
-* `RoboCar.ino` for the four motors, two servos and sensors
-* `RoboArm.ino` for the four arm servos
-* `ESPCam.ino` for the camera and web interface
-
-I also organized the project photos and videos and finished putting the files into the repository.
-
-![SCAR](SCAR1.jpg)
-
-**Total time spent: 3 hours**
+**Total time spent: 4 hours**
