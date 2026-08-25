@@ -64,6 +64,25 @@ Built as an exploration of robotics and embedded systems, SCAR was designed to b
 | Solar Panel  | Experimental power support |
 
 ---
+BoM 
+
+| Component | Qty | Price (INR) | Approx. USD |
+|---|---:|---:|---:|
+| Arduino UNO R4 WiFi | 1 | ₹1,500 | $17.05 |
+| ESP32-CAM | 1 | ₹582 | $6.61 |
+| Main chassis | 1 | ₹500 | $5.68 |
+| Robotic arm chassis | 1 | ₹1,200 | $13.64 |
+| DC geared motors | 4 | ₹90 each | $4.09 |
+| Arduino Motor Shield | 1 | ~₹500 | $5.68 |
+| Arm servo motors | 4 | ₹150 each | $6.82 |
+| SG90 camera servos | 2 | ~₹100 each | $2.27 |
+| DHT11 | 1 | ₹90 | $1.02 |
+| MQ-2 gas sensor | 1 | ~₹90 | $1.02 |
+| HC-SR04 | 1 | ~₹69 | $0.78 |
+| Solar panel | 1 | ₹200 | $2.27 |
+| **Total** | | **~₹7,081** | **~$80.47** |
+
+---
 
 ## 📂 Project Structure
 
